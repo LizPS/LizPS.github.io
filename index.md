@@ -38,7 +38,7 @@ laboratory. This patient was tentatively diagnosed in August 2012 and began trea
 Oct 14, 2012.
 
 <!-- html table generated in R 3.1.1 by xtable 1.7-4 package -->
-<!-- Fri Sep 19 22:09:41 2014 -->
+<!-- Sat Sep 20 10:45:05 2014 -->
 <table border=1>
 <tr> <th>  </th> <th> Date </th> <th> TSH </th> <th> FreeT4 </th> <th> FreeT3 </th>  </tr>
   <tr> <td align="right"> 1 </td> <td> 4/31/2012 </td> <td>  </td> <td align="right"> 1.60 </td> <td align="right"> 4.60 </td> </tr>
@@ -64,13 +64,6 @@ Oct 14, 2012.
 <img src=".\assets\img\screen.png" style="width:274px;height:353px">
 
 *** =right
-
-```
-## Loading required package: ggplot2
-## Loading required package: reshape2
-## Loading required package: scales
-```
-
 <img src="assets/fig/plot2.png" title="plot of chunk plot2" alt="plot of chunk plot2" style="display: block; margin: auto;" />
 <p>Patients enter their data on the left side of the screen and can use a tabbed interface to see either instructions, some basic information about Graves disease, a table of the data as they enter it or a graph of the entered data.</p>
 
