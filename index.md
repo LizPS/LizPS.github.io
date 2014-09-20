@@ -61,7 +61,7 @@ Oct 14, 2012.
 ### Interface example
 
 *** =left
-<img src=".\assets\img\screen.png" style="width:274px;height:353px">
+<img src=".\assets\img\screen.png">
 
 *** =right
 <img src="assets/fig/plot2.png" title="plot of chunk plot2" alt="plot of chunk plot2" style="display: block; margin: auto;" />

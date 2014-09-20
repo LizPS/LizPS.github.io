@@ -49,7 +49,7 @@ xtable(sampledata)
 ### Interface example
 
 *** =left
-<img src=".\assets\img\screen.png" style="width:274px;height:353px">
+<img src=".\assets\img\screen.png">
 
 *** =right
 ```{r plot2, fig.height = 4, echo=FALSE, fig.align = 'center', warning = F}
