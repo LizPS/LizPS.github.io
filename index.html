@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>How am I doing?</title>
+  <meta charset="utf-8">
+  <meta name="description" content="How am I doing?">
+  <meta name="author" content="Liz Supinski">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>How am I doing?</h1>
+    <h2>a webapp for patients with Graves' disease</h2>
+    <p>Liz Supinski<br/>Coursera/JHU Developing Data Products</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:url(assets/img/md_pa5.png);">
+  <hgroup>
+    <h3>Introduction</h3>
+  </hgroup>
+  <article data-timings="">
+    <p>Graves&#39; disease is a type of primary hyperthyroidism caused by autoimmunity. </p>
+
+<p>Patients with Graves&#39; require frequent thyroid testing and lifelong followup
+even after successful treatment as relapse rates are high, as is hypothyroidism
+induced by treatment.</p>
+
+<p>In the U.S., the prevalence of electronic medical records means that patients
+often receive test results directly from the lab, without explanation by a
+healthcare provider.</p>
+
+<p>This application is intended to let patients visualize their test data, see if
+they are responding to treatment as expected and identify when they need to seek
+medical advice. It also provides a tool for doctors and patients to discuss
+results of treatment.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h3>Patient Input</h3>
+  </hgroup>
+  <article data-timings="">
+    <p>Here is an example of the kind of data a patient might receive from the 
+laboratory. This patient was tentatively diagnosed in August 2012 and began treatment
+Oct 14, 2012.</p>
+
+<!-- html table generated in R 3.1.1 by xtable 1.7-4 package -->
+
+<!-- Fri Sep 19 22:09:41 2014 -->
+
+<table border=1>
+<tr> <th>  </th> <th> Date </th> <th> TSH </th> <th> FreeT4 </th> <th> FreeT3 </th>  </tr>
+  <tr> <td align="right"> 1 </td> <td> 4/31/2012 </td> <td>  </td> <td align="right"> 1.60 </td> <td align="right"> 4.60 </td> </tr>
+  <tr> <td align="right"> 2 </td> <td> 6/13/2012 </td> <td> &lt;.005 </td> <td align="right">  </td> <td align="right"> 5.80 </td> </tr>
+  <tr> <td align="right"> 3 </td> <td> 9/2/2012 </td> <td> &lt;.005 </td> <td align="right">  </td> <td align="right"> 6.00 </td> </tr>
+  <tr> <td align="right"> 4 </td> <td> 10/5/2012 </td> <td> 0.006 </td> <td align="right"> 1.30 </td> <td align="right"> 3.90 </td> </tr>
+  <tr> <td align="right"> 5 </td> <td> 11/23/2012 </td> <td> 1.71 </td> <td align="right"> 0.70 </td> <td align="right"> 2.70 </td> </tr>
+  <tr> <td align="right"> 6 </td> <td> 12/21/2012 </td> <td> 4.57 </td> <td align="right"> 0.80 </td> <td align="right"> 2.80 </td> </tr>
+  <tr> <td align="right"> 7 </td> <td> 1/27/2013 </td> <td> 5.54 </td> <td align="right">  </td> <td align="right"> 2.90 </td> </tr>
+  <tr> <td align="right"> 8 </td> <td> 3/4/2013 </td> <td> 2.31 </td> <td align="right"> 0.90 </td> <td align="right"> 3.10 </td> </tr>
+  <tr> <td align="right"> 9 </td> <td> 4/7/2013 </td> <td> 2.13 </td> <td align="right"> 1.10 </td> <td align="right"> 3.20 </td> </tr>
+  <tr> <td align="right"> 10 </td> <td> 7/16/2013 </td> <td> 4.59 </td> <td align="right"> 0.90 </td> <td align="right"> 2.80 </td> </tr>
+  <tr> <td align="right"> 11 </td> <td> 9/5/2013 </td> <td> 2.8 </td> <td align="right"> 1.00 </td> <td align="right"> 3.00 </td> </tr>
+  <tr> <td align="right"> 12 </td> <td> 11/4/2013 </td> <td> 2.47 </td> <td align="right"> 1.00 </td> <td align="right"> 2.90 </td> </tr>
+  <tr> <td align="right"> 13 </td> <td> 1/5/2014 </td> <td> 3.04 </td> <td align="right"> 1.10 </td> <td align="right"> 3.10 </td> </tr>
+   </table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h3>Interface example</h3>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:25%;'>
+<p><img src=".\assets\img\screen.png" style="width:274px;height:353px"></p>
+
+</div>
+<div style='float:right;width:70%;'>
+<pre><code>## Loading required package: ggplot2
+## Loading required package: reshape2
+## Loading required package: scales
+</code></pre>
+
+<p><img src="assets/fig/plot2.png" title="plot of chunk plot2" alt="plot of chunk plot2" style="display: block; margin: auto;" /></p>
+
+<p>Patients enter their data on the left side of the screen and can use a tabbed interface to see either instructions, some basic information about Graves disease, a table of the data as they enter it or a graph of the entered data.</p>
+
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:url(assets/img/smile4.png);">
+  <hgroup>
+    <h3>Behind the scenes</h3>
+  </hgroup>
+  <article data-timings="">
+    <p>The application normalizes the test scores that patient report so that they can
+all be displayed on the same graph. A numeric axis is replaced with a green-
+colored band indicating normal range. (For these tests, like virtually all 
+medical tests, normal range is $\pm 2 $ standard deviations.) </p>
+
+<p>We hope that this application will provide a valuable tool for patients and 
+physicians to discuss the course of treatment and progress, and reassure patients
+about test data between doctor&#39;s visits. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Patient Input'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Interface example'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Behind the scenes'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/quiz/js/jquery.quiz.js"></script>
+<script src="libraries/widgets/quiz/js/mustache.min.js"></script>
+<script src="libraries/widgets/quiz/js/quiz-app.js"></script>
+
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
