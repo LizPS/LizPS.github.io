@@ -49,7 +49,7 @@ xtable(sampledata)
 ### Interface example
 
 *** =left
-<img src="url(http://github.com/LizPS/LizPS.github.io/blob/master/assets/img/screen.png)">
+<img src="url(assets/img/screen.png)">
 
 *** =right
 ```{r plot2, fig.height = 4, echo=FALSE, fig.align = 'center', warning = F}
